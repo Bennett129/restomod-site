@@ -1,0 +1,84 @@
+/* Sanity Studio ships a global reset in the "sui" layer. Declaring that layer
+   first gives it the lowest priority, so it cannot override Tailwind's utilities. */
+@layer sui;
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg: #f6f3ee;
+  --bg-raised: #ffffff;
+  --fg: #16130f;
+  --muted: #6b645a;
+  --line: #ded8ce;
+  --accent: #b4530f;
+  --accent-fg: #ffffff;
+}
+
+.dark {
+  --bg: #0d0c0b;
+  --bg-raised: #171512;
+  --fg: #f4efe7;
+  --muted: #a39b8f;
+  --line: #2b2722;
+  --accent: #f59e0b;
+  --accent-fg: #1a1203;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-raised: var(--bg-raised);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --font-sans: var(--font-geist-sans);
+  --font-display: var(--font-display);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+@layer base {
+  * {
+    border-color: var(--line);
+  }
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+}
+
+@utility display {
+  font-family: var(--font-display), var(--font-geist-sans), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 0.95;
+}
+
+@utility eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
