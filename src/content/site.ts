@@ -14,7 +14,7 @@ export const IMAGES = {
   hero: { id: "1683638287438-7710b87ffb41", alt: "A black E92 coupe parked outside a workshop", by: "venajeborec" },
   silver: { id: "1656335733647-a8d56d329a35", alt: "A silver E92 coupe in front of an ivy-covered building", by: "grebenyev" },
   sunset: { id: "1640973988967-3fc715fef53a", alt: "A grey E92 coupe seen from behind at sunset", by: "griff3344" },
-  garage: { id: "1486006920555-c77dcf18193c", alt: "A car with its door open inside a dim workshop", by: "loganmeis" },
+  garage: { id: "1621779938022-2ddb13674e4f", alt: "A black E92 M3 backed into a dark brick workshop", by: "s_midili" },
   engine: { id: "1626995587693-c50c9a5544c6", alt: "A mechanic leaning into an engine bay in a dimly lit workshop", by: "brodus_k" },
   suspension: { id: "1783427401907-9a4feb7544d3", alt: "A coilover, brake disc and caliper with the wheel removed", by: "bharat05" },
   interior: { id: "1603980928031-21ff9cfa8b6d", alt: "A dark cabin with the instrument cluster glowing", by: "kristianvalco" },
